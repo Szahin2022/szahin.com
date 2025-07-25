@@ -21,7 +21,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 20px;
+      gap: 40px;
       min-height: 100vh;
       justify-content: center;
       position: relative;
@@ -30,7 +30,7 @@
 
     .content {
       z-index: 1;
-      max-width: 600px;
+      max-width: 800px;
     }
 
     h1 {
@@ -38,9 +38,11 @@
       margin-bottom: 0.5em;
     }
 
-    p {
-      margin: 0;
-      font-size: 1.2rem;
+    .section {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
     }
 
     a {
@@ -48,7 +50,6 @@
       align-items: center;
       justify-content: center;
       gap: 10px;
-      margin-top: 5px;
       padding: 15px 30px;
       font-size: 1.2rem;
       background-color: #9146FF;
@@ -63,14 +64,6 @@
       background-color: #772ce8;
     }
 
-    .section {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-      margin-bottom: 40px;
-    }
-
     .icon {
       width: 24px;
       height: 24px;
@@ -83,23 +76,16 @@
     <h1>Witaj na Szahin.pl!</h1>
 
     <div class="section">
-      <p>Sprawdź mój kanał na Twitch:</p>
       <a href="https://twitch.tv/Szahiniasty" target="_blank" rel="noopener noreferrer">
         <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitch.svg" alt="Twitch" class="icon" />
-        Oglądaj na Twitchu
+        Twitch
       </a>
-    </div>
 
-    <div class="section">
-      <p>Sprawdź mój profil na Steam:</p>
       <a href="https://steamcommunity.com/profiles/76561199393434551/" target="_blank" rel="noopener noreferrer">
         <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/steam.svg" alt="Steam" class="icon" />
         Steam
       </a>
-    </div>
 
-    <div class="section">
-      <p>Dołącz do mnie na Discordzie:</p>
       <a href="https://discord.gg/kXAYr3kJ" target="_blank" rel="noopener noreferrer">
         <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/discord.svg" alt="Discord" class="icon" />
         Discord
@@ -115,7 +101,7 @@
   <script>
     window.onload = function () {
       const music = document.getElementById('music');
-      music.volume = 0.2; // ustawienie głośności na 20%
+      music.volume = 0.2;
       const playPromise = music.play();
       if (playPromise !== undefined) {
         playPromise.catch(err => {
