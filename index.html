@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Szahin | Discord, Steam, Instagram, Twitch | Szahin</title>
+  <title>Szahin.pl</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js"></script>
   <style>
@@ -47,6 +47,7 @@
     .content {
       z-index: 1;
       max-width: 800px;
+      width: 100%;
     }
 
     h1 {
@@ -56,7 +57,7 @@
     .section {
       display: flex;
       justify-content: center;
-      flex-wrap: wrap;
+      flex-wrap: nowrap; /* linki w jednej linii */
       gap: 20px;
     }
 
@@ -65,14 +66,17 @@
       align-items: center;
       justify-content: center;
       gap: 10px;
-      padding: 15px 30px;
+      padding: 15px 20px;
       font-size: 1.2rem;
       background-color: #9146FF;
       color: white;
       text-decoration: none;
       border-radius: 10px;
       transition: background 0.3s ease;
-      width: 250px;
+      flex: 1 1 0; /* elastycznie rośnie i kurczy się */
+      min-width: 140px; /* minimalna szerokość */
+      max-width: 250px; /* maksymalna szerokość */
+      white-space: nowrap; /* tekst w jednej linii */
     }
 
     a:hover {
@@ -82,16 +86,17 @@
     .icon {
       width: 24px;
       height: 24px;
+      flex-shrink: 0;
     }
 
-    /* NOWE: PRZYCISKI PO LEWEJ W KOLUMNIE */
+    /* PRZYCISKI PO LEWEJ W KOLUMNIE */
     .side-controls {
       position: fixed;
       top: 100px;
       left: 30px;
       display: flex;
       flex-direction: column;
-      gap: 30px; /* większy odstęp */
+      gap: 30px;
       z-index: 10;
     }
 
@@ -130,7 +135,7 @@
   </div>
 
   <div class="content">
-    <h1>@Szahin</h1>
+    <h1>Witaj na Szahin.pl!</h1>
 
     <div class="section">
       <a href="https://twitch.tv/Szahiniasty" target="_blank" rel="noopener noreferrer">
@@ -146,6 +151,11 @@
       <a href="https://discord.gg/kXAYr3kJ" target="_blank" rel="noopener noreferrer">
         <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/discord.svg" alt="Discord" class="icon" />
         Discord
+      </a>
+
+      <a href="https://instagram.com/szahin_os" target="_blank" rel="noopener noreferrer">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" class="icon" />
+        Instagram
       </a>
     </div>
 
