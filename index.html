@@ -113,8 +113,9 @@
   </audio>
 
   <script>
-    window.onload = function() {
+    window.onload = function () {
       const music = document.getElementById('music');
+      music.volume = 0.2; // ustawienie głośności na 20%
       const playPromise = music.play();
       if (playPromise !== undefined) {
         playPromise.catch(err => {
